@@ -1,0 +1,30 @@
+<!-- INCLUDE ../../../../templates/default/page_header.html -->
+<form method="post" action="{F_DECAY_ROLLBACK}">
+    <table width="100%" border="0" cellpadding="1" cellspacing="1">
+        <tr>
+            <th colspan="5">Rollback Percentage-based DKP Decay</th>
+        </tr>
+        <tr>
+            <th width="5">&nbsp;</th>
+            <th width="150" nowrap="nowrap">Date</th>
+            <th width="50" nowrap="nowrap">%</th>
+            <th width="100%" nowrap="nowrap">Reason</th>
+            <th width="100" nowrap="nowrap">Admin</th>
+        </tr>
+        <!-- BEGIN decay_row -->
+        <tr class="{decay_row.ROW_CLASS}">
+            <td><input type="checkbox" name="selected[]"
+                value="{decay_row.ID}" /></td>
+            <td>{decay_row.DATE}</td>
+            <td>{decay_row.PERCENTAGE}%</td>
+            <td>{decay_row.REASON}</td>
+            <td>{decay_row.APPLIED_BY}</td>
+        </tr>
+        <!-- END decay_row -->
+        <tr>
+            <th align="center" colspan="5"><input type="submit"
+                name="rollback" value="{L_ROLLBACK}" class="mainoption" /></th>
+        </tr>
+    </table>
+</form>
+<!-- INCLUDE ../../../../templates/default/page_tail.html -->

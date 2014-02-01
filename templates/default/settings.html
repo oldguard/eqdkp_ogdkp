@@ -1,0 +1,23 @@
+<!-- INCLUDE ../../../../templates/default/page_header.html -->
+<form method="post" action="{F_SETTINGS}">
+    <table width="100%" border="0">
+        <colgroup>
+            <col width="60%" class="row2" />
+            <col width="40%" class="row1" />
+        </colgroup>
+        <tr>
+            <th align="center" colspan="2">OGDKP Plugin Settings</th>
+        </tr>
+        <tr>
+            <td width="150"><label for="bank">Bank
+                    character's name:</label></td>
+            <td><input id="bank_character" name="bank_character"
+                type="text" value="{BANK_CHARACTER}" min="0" max="100" />{FV_BANK_CHARACTER}</td>
+        </tr>
+        <tr>
+            <th colspan="2"><input type="submit" name="save"
+                value="Save" class="mainoption" /></th>
+        </tr>
+    </table>
+</form>
+<!-- INCLUDE ../../../../templates/default/page_tail.html -->

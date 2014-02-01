@@ -1,0 +1,21 @@
+Old Guard EQdkp Plugin
+Copyright (C) 2013-2014 The Old Guard EQdkp Plugin Team
+
+Introduction:
+-------------
+	This plugin's primary purpose is it facilitate the import and export of DKP
+	data to	and from World of Warcraft.
+
+Contact:
+--------
+	Please file any bug reports on this project's GitHub page, located at:
+	https://github.com/oldguard/eqdkp_ogdkp/issues
+
+Installation:
+-------------
+	See the INSTALL file for detailed information.
+
+Licensing:
+----------
+	This software is distributed under the GPL.  Please read through the files
+	COPYING and LICENSE for more information.

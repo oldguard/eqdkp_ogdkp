@@ -1,0 +1,27 @@
+<!-- INCLUDE ../../../../templates/default/page_header.html -->
+<form method="post" action="{F_DECAY}">
+	<table width="100%" border="0">
+		<colgroup>
+			<col width="150" class="row2" />
+			<col class="row1" />
+		</colgroup>
+		<tr>
+            <th colspan="2">Apply Percentage-based DKP Decay</th>
+        </tr>
+		<tr>
+			<td><label for="percentage">Percentage to Decay:</label></td>
+			<td>
+                <input id="decay" name="percentage" type="text" value="{DEFAULT_DECAY}" min="0" max="100" />
+                (ie. for a 25% decay, enter "25")
+            </td>
+		</tr>
+		<tr>
+			<td><label for="reason">Reason:</label></td>
+			<td><input id="reason" type="text" name="reason" value="{DEFAULT_REASON}"/></td>
+		</tr>
+		<tr>
+			<th colspan="2"><input type="submit" name="decay" value="Decay" class="mainoption"/></th> 
+		</tr>
+	</table>
+</form>
+<!-- INCLUDE ../../../../templates/default/page_tail.html -->

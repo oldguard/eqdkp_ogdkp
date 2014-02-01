@@ -1,0 +1,6 @@
+Installation Instructions:
+--------------------------
+
+1. Ensure the directory containing this file is named 'ogdkp'.
+2. Copy this directory and all contents to the plugins directory found in your EQdkp installation.
+3. Activate the plugin through EQdkp's administration interface.

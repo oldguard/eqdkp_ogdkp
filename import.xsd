@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://lesgrognards.net/ogdkp"
+    xmlns="http://lesgrognards.net/ogdkp"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:complexType name="loot">
+        <xs:sequence>
+            <xs:element name="itemName" type="xs:string" />
+            <xs:element name="cost" type="xs:integer" />
+            <xs:element name="reason" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="raid">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />
+                <xs:element name="note" type="xs:string" />
+                <xs:element name="timestamp" type="xs:integer" />
+                <xs:element name="value" type="xs:integer" />
+                <xs:element name="attendees">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="attendee" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="loot" type="loot" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="adjustments" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="adjustment" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="note" type="xs:string" />
+                                        <xs:element name="value" type="xs:integer" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="bank" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="loot" type="loot" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
